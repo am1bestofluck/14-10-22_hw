@@ -1,23 +1,28 @@
 using static System.Console;
 class array_randomized_extended:array_randomized
 {
-    protected int size,lower_limit,upper_limit;
-    public array_randomized_extended(int size_i, int lower_limit_i, int upper_limit_i)
-    {
-        this.size=size_i;
-        this.lower_limit=lower_limit_i;
-        this.upper_limit=upper_limit_i;
-        this.client=calculation();
-    }
-    public dynamic calculation()// а зачем наследование делать если приходится дублировать нужный код=\
-    {
-        int[] output= new int[this.size];
-        Random _gen = new Random();
-        for (int i = 0; i < size; i++)
+
+    public array_randomized_extended():base()
         {
-            output[i]=_gen.Next(lower_limit,upper_limit);
+            //этот вызывался чаще чем хотелось было
         }
-        return output;
+    public array_randomized_extended(int size_i, int lower_limit_i, int upper_limit_i):base(size_i:size_i,upper_limit_i:upper_limit_i,lower_limit_i:lower_limit_i)
+    {
+        //это было ОЧЕНЬ сложно ._.
+    }
+    
+    public dynamic get_quantity_of_slice_elements()
+    {
+        int print_this=0;
+        for (int i = 0; i < this.client.Length; i++)
+        {
+            if (this.client[i]%2==0)
+            {
+                print_this++;
+            }
+        }
+        WriteLine($"Чётных элементов в массиве: {print_this}");
+        return null;
     }
     public static void todo(int task)
     {
@@ -43,6 +48,7 @@ class array_randomized_extended:array_randomized
     public dynamic task1()
     {
         array_randomized_extended.todo(1);
+        this.get_quantity_of_slice_elements();
         return null;
     }
     public dynamic task2()
