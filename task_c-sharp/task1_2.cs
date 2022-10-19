@@ -35,7 +35,7 @@ class array_randomized_extended:array_randomized
                 print_this+=this.client[i];
             }
         }
-        WriteLine($"Чётных элементов в массиве: {print_this}");
+        WriteLine($"Cумма нечётных элементов: {print_this}");
         return null;
 
     }
