@@ -4,14 +4,14 @@ class array_randomized_extended:array_randomized
 
     public array_randomized_extended():base()
         {
-            //этот вызывался чаще чем хотелось было
+            //этот родительский метод вызывался чаще чем хотелось бы=))
         }
     public array_randomized_extended(int size_i, int lower_limit_i, int upper_limit_i):base(size_i:size_i,upper_limit_i:upper_limit_i,lower_limit_i:lower_limit_i)
     {
         //это было ОЧЕНЬ сложно ._.
     }
     
-    public dynamic get_quantity_of_slice_elements()
+    public dynamic show_quantity_of_even_values()
     {
         int print_this=0;
         for (int i = 0; i < this.client.Length; i++)
@@ -23,6 +23,21 @@ class array_randomized_extended:array_randomized
         }
         WriteLine($"Чётных элементов в массиве: {print_this}");
         return null;
+    }
+    
+    public dynamic show_sum_of_uneven_elements()
+    {
+        int print_this=0;
+        for (int i = 0; i < this.client.Length; i++)
+        {
+            if (i%2==1)
+            {
+                print_this+=this.client[i];
+            }
+        }
+        WriteLine($"Чётных элементов в массиве: {print_this}");
+        return null;
+
     }
     public static void todo(int task)
     {
@@ -48,12 +63,13 @@ class array_randomized_extended:array_randomized
     public dynamic task1()
     {
         array_randomized_extended.todo(1);
-        this.get_quantity_of_slice_elements();
+        this.show_quantity_of_even_values();
         return null;
     }
     public dynamic task2()
     {
         array_randomized_extended.todo(2);
+        this.show_sum_of_uneven_elements();
         return null;
     }
 }
