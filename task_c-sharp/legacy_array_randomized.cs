@@ -1,8 +1,8 @@
 using static System.Console;
 class array_randomized
 {
-    int size,lower_limit,upper_limit;
-    int[] client;
+    protected int size,lower_limit,upper_limit;
+    protected int[] client;
     public array_randomized(int size_i, int lower_limit_i, int upper_limit_i)
     {
         this.size=size_i;
