@@ -23,4 +23,4 @@
 </table>    
 
 [выводы, с#](https://github.com/am1bestofluck/14-10-22_hw/blob/105c4431d1be02bc5900aea773559132796e4cf1/task_c-sharp/Program.cs)  
-[выводы, py](https://github.com/am1bestofluck/14-10-22_hw/blob/105c4431d1be02bc5900aea773559132796e4cf1/task_py/head.py)
+[выводы, py](https://github.com/am1bestofluck/14-10-22_hw/blob/eebfa1814c1d3dfeb0f93ef22f22019d7e61098b/task_py/head.py)
