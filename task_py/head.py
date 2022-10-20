@@ -19,8 +19,7 @@ class random_list:
     def calculate_fp(self)->list:
         output=[]
         for walk  in self.__client:
-            # output[self.__client.index(walk)]=
-            output.insert(0,walk+round(random.uniform(0,1),4))# магия бесконтактного переворота списка в переворачивания в действии.
+            output.insert(0,walk+round(random.uniform(0,1),4))# магия бесконтактного переворачивания списка в действии.
         return output
     def get_quantity_of_even_values(self)->None:
         _out=0
